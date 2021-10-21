@@ -1,0 +1,94 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h3{
+    text-align: center;
+}
+
+hr{
+    border: 1px solid black;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.calculadora{
+    width:400px;
+    min-height:500px;
+    background-color: rgb(73, 73, 71);
+    margin: auto;
+    padding-top: 15px;
+    display: flex;
+    
+}
+
+.container{
+    display: grid;
+    width: 350px;
+    min-height: 470px;
+    background-color: gray;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    grid-template-rows: minmax(94px,auto) 376px;
+}
+
+.pantalla{
+    width: 350px;
+    min-height: 94px;
+    background-color: honeydew;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    
+}
+
+.pantalla span{
+    font-size: 47px;
+    margin-right: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+.botones{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5px;
+    margin-top: 1.5px;
+}
+
+.botones button{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.botones .tipo-2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.botones .tipo-3{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
